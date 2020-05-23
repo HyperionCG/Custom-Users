@@ -3,16 +3,6 @@
     {{ form.as_p }}
     <input type="submit" value="Submit!">
 </form>
-
-{%if request.user.is_authenticated %}
-    You are logged in as {{ request.user.username }}
-{%endif%}
-{%if not request.user.is_authenticated %}
     Please Login <br>
-    To Login <a href="login/">Click Here</a> <p></p>
-{%endif%}
-{%if request.user.is_authenticated %}<br>
-    To Logout <a href="logout/">Click Here</a>
-{%endif%}
-
-    {{ data }}
+    To Login <a href="login/">Click Here</a> <br>
+    To Sign Up<a href="signup/">Click Here</a> <br>

@@ -20,7 +20,6 @@ from CUapp.urls import urlpatterns as CUapp_urls
 from CUapp.views import index
 
 urlpatterns = [
-    path('asdf/', index),
     path('admin/', admin.site.urls),
 ]
 urlpatterns += CUapp_urls

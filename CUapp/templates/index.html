@@ -1,12 +1,11 @@
 <h1>Hello Custom User</h1>
-{%if request.user.is_authenticated %}
-    You are logged in as {{ request.user.username }}
-{%endif%}
-{%if not request.user.is_authenticated %}
-    Please Login <br>
-    To Login <a href="login/">Click Here</a> <p></p>
-    Or Signup <a href="signup/">Click Here</a>
-{%endif%}
-{%if request.user.is_authenticated %}
-    To Logout <a href="logout/">Click Here</a>
-{%endif%}
+<p>
+    Welcome!
+</p>
+    Username: {{ username }} <br>
+    You are logged in as {{ display_name }}<br>
+
+    To Logout <a href="/logout/">Click Here</a>
+    <p>
+        {{data}}
+    </p>

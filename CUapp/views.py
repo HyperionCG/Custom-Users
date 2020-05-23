@@ -32,7 +32,7 @@ def signupview(request):
                     request.GET.get('next', reverse('homepage'))
                 )
     form = SignUpForm()
-    return render(request, 'generic_form.html', {'form':form})
+    return render(request, 'userpage.html', {'form':form})
 
 def loginview(request):
     if request.method == "POST":
@@ -47,4 +47,4 @@ def loginview(request):
                     request.GET.get('next', reverse('homepage'))
                 )
     form = LoginForm()
-    return render(request, 'generic_form.html', {'form':form})
+    return render(request, 'userpage.html', {'form':form})
